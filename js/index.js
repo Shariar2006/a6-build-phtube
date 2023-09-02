@@ -39,13 +39,15 @@ const loadPhTube = async (categoryId) => {
 
 function timeConvert(seconds) {
   seconds = Number(seconds);
+
+  let day = Math.floor(seconds / 86400);
   let hour = Math.floor(seconds / 3600);
   let minute = Math.floor(seconds % 3600 / 60);
-  let second = Math.floor(seconds % 3600 % 60);
 
+  let dayDisplay = day > 0 ? day + (day == 1 ? " day, " : " days, ") : "";
   let hourDisplay = hour > 0 ? hour + (hour == 1 ? " hour, " : " hours, ") : "";
   let minuteDisplay = minute > 0 ? minute + (minute == 1 ? " minute, " : " minutes, ") : "";
-  return(hourDisplay + minuteDisplay)
+  return(dayDisplay + hourDisplay + minuteDisplay)
 }
 
 
@@ -63,7 +65,7 @@ const displaycards = cards => {
         tubeCard.classList = `card mx-auto p-3 bg-base-100 shadow-xl w-[312px]`
         tubeCard.innerHTML =
           `<figure><img class="relative" src="${card.thumbnail}" alt="" /> 
-            <span class="absolute right-6 text-xs top-36 text-white font-semibold bg-gray-900 p-1 rounded">${timeConvert(card?.others?.posted_date)}</span> 
+            <span class="absolute right-6 text-xs top-36 text-white font-semibold bg-gray-900 p-1 rounded">${timeConvert(card?.others?.posted_date)}</span>
           </figure>
           <div class="mt-5 gap-3 flex">
             <div class="w-8">
