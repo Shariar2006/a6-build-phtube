@@ -5,7 +5,6 @@ const loadCategory = async () => {
   const res = await fetch('https://openapi.programming-hero.com/api/videos/categories')
   const data = await res.json()
   const btns = data.data;
-  console.log(btns)
   displayBtns(btns);
 }
 
@@ -25,7 +24,6 @@ const defaultTube = async () => {
   const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/1000`)
   const data = await res.json();
   const cards = data.data;
-  console.log(cards)
   displaycards(cards)
 }
 
@@ -33,7 +31,6 @@ const loadPhTube = async (categoryId) => {
   const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`)
   const data = await res.json();
   const cards = data.data;
-  console.log(cards)
   displaycards(cards)
 }
 
@@ -95,4 +92,3 @@ const displaycards = cards => {
 
 
 defaultTube();
-module.export = app;
