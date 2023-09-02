@@ -8,7 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="https://kit.fontawesome.com/931a0c92ef.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -16,32 +16,29 @@
     <header>
         <div class="navbar bg-base-100">
             <div class="navbar-start">
-                <img src="Logo.png" alt="">
+                <img class="" src="Logo.png" alt="">
             </div>
             <div class="navbar-center ml-10 lg:ml-0">
                 <button class="text-white text-xs font-medium bg-[#FF1F3D] py-[10px] px-[10px] lg:px-[20px] rounded-md">Sort by view</button>
                 
             </div>
             <div class="navbar-end">
-                <button class="text-white text-xs font-medium bg-[#FF1F3D] py-[10px] px-[20px] rounded-md">Blog</button>
+                <button onclick="" to="../blog.html" class="text-white text-xs font-medium bg-[#FF1F3D] py-[10px] px-[20px] rounded-md"> <a href="blog.html">Blog</a></button>
             </div>
         </div>
         <hr>
     </header>
     <main class="container mx-auto">
-        <section class="mt-10">
-            <div class="text-center">
-                <button class="text-white text-xs font-medium bg-[#FF1F3D] py-[10px] px-[10px] lg:px-[20px] rounded-md">All</button>
-                <button class="text-white text-xs font-medium bg-[#FF1F3D] py-[10px] px-[10px] lg:px-[20px] rounded-md mx-6">Music</button>
-                <button class="text-white text-xs font-medium bg-[#FF1F3D] py-[10px] px-[10px] lg:px-[20px] rounded-md mr-6">Comedy</button>
-                <button class="text-white text-xs font-medium bg-[#FF1F3D] py-[10px] px-[10px] lg:px-[20px] rounded-md">Drawing</button>
-            </div>
+        <section id="btn-container" class="mt-10 flex justify-center gap-4">
+            
         </section>
 
         <section class="mt-16">
             <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
             </div>
+        </section>
+        <section id="errorContainer" class="w-full m-auto justify-center">
         </section>
 
     </main>
